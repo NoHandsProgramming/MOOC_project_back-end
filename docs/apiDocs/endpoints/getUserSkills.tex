@@ -1,0 +1,56 @@
+\subsection{Get User Skills}
+	\textit{Retrieves the list of skills for a particular user.}
+
+	\subsubsection{URL}
+		\texttt{/users/:userId/skills}
+
+	\subsubsection{Method}
+		\texttt{GET}
+
+	\subsubsection{URL Params}
+
+		\textbf{Required:}
+
+		\verb| userId=[integer] |
+
+		\textbf{Optional:}
+
+		\verb| none |
+
+	\subsubsection{Data Params}
+		None
+
+	\subsubsection{Success Response}
+		\textit{What should the status code be on success, and what, if any, data is returned? Give some example content.}
+
+		\textbf{Code:} \verb| 200 |
+		\textbf{Content:}
+
+		\begin{lstlisting}
+[
+	
+]
+		\end{lstlisting}
+
+	\subsubsection{Error Response}
+		\textit{What gets returned when things go wrong? All possible errors should be listed here, even if it seems repetitive to do so.}
+
+		\textbf{Code:} \verb| 401 UNAUTHORIZED |
+		\textbf{Content:}
+
+		\begin{lstlisting}
+{
+	"error": "Log in"
+}
+		\end{lstlisting}
+
+		OR
+
+		\textbf{Code:} \verb| 404 NOT FOUND |
+		\textbf{Content:} \textit{none}
+
+	\subsubsection{Sample Call}
+		\textit{A sample call to the enpoint in a runnable format (\$.ajax call or curl request). This makes it easier for someone to implement your request.}
+
+	\subsubsection{Notes}
+		\textit{All commentary, discussion, or miscellaneous info should be shared here.}

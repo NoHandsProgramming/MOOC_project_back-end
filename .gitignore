@@ -1,0 +1,5 @@
+#Ignore Latex output files.
+*.aux
+*.log
+*.out
+*.toc

@@ -1,0 +1,96 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage{xspace}
+\usepackage{listings}
+\usepackage{hyperref}
+
+\newcommand{\projectTitle}{\texttt{MOOC Project}}
+
+\begin{document}
+
+\title{REST API Documentation for \projectTitle}
+\author{Andrew Lalis\\ andrewlalisofficial@gmail.com}
+\date{Last modified on\\ \today}
+\maketitle
+
+\setcounter{tocdepth}{2}
+\tableofcontents
+
+\section{Introduction}
+	This document lists in detail each of the requests that can be made to the \projectTitle server. The API relies on the REST principles, and all responses will be in the form of an HTTP result code, such as \texttt{200 SUCCESS} and \texttt{404 NOT FOUND}, and if applicable, an accompanying JSON object containing the response data.
+
+\section{Documentation Template}
+	Each possible command will be structured in the following manner:\\
+	\subsection{Example Command Title}
+		\textit{Additional information about the API call. Use verbs which match the request type, and proper plurality (one vs. multiple).}
+
+		\subsubsection{URL}
+			\textit{The URL structure (path only, no root url). Any variable endpoints or values are denoted with a $ : $.}
+
+		\subsubsection{Method}
+			\textit{The request type}
+			\texttt{GET} | \texttt{POST} | \texttt{DELETE} | \texttt{PUT}
+
+		\subsubsection{URL Params}
+			\textit{If there are URL parameters, name them as they appear in the URL section, denoting any constraints, and separating optional and required parameters.}
+
+			\textbf{Required:}
+
+			\verb| id=[integer] |
+
+			\textbf{Optional:}
+
+			\verb| photo_id=[alphanumeric] |
+
+		\subsubsection{Data Params}
+			\textit{If a post request is sent, what should the payload body look like? Below is an example payload body.}
+
+			\begin{lstlisting}
+{
+	"id": 12345,
+	"name": "Andrew"
+}
+			\end{lstlisting}
+
+		\subsubsection{Success Response}
+			\textit{What should the status code be on success, and what, if any, data is returned? Give some example content.}
+
+			\textbf{Code:} \verb| 200 |
+			\textbf{Content:}
+
+			\begin{lstlisting}
+{
+	"id": 12345,
+	"count": 5
+}
+			\end{lstlisting}
+
+		\subsubsection{Error Response}
+			\textit{What gets returned when things go wrong? All possible errors should be listed here, even if it seems repetitive to do so.}
+
+			\textbf{Code:} \verb| 401 UNAUTHORIZED |
+			\textbf{Content:}
+
+			\begin{lstlisting}
+{
+	"error": "Log in"
+}
+			\end{lstlisting}
+
+			OR
+
+			\textbf{Code:} \verb| 404 NOT FOUND |
+			\textbf{Content:} \textit{none}
+
+		\subsubsection{Sample Call}
+			\textit{A sample call to the enpoint in a runnable format (\$.ajax call or curl request). This makes it easier for someone to implement your request.}
+
+		\subsubsection{Notes}
+			\textit{All commentary, discussion, or miscellaneous info should be shared here.}
+
+\newpage
+\section{Endpoints}
+	\input{endpoints/getUserSkills.tex}
+
+
+\end{document}
