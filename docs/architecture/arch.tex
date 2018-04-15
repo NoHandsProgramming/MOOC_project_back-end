@@ -1,0 +1,42 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage{xspace}
+\usepackage{listings}
+\usepackage{hyperref}
+
+\newcommand{\projectTitle}{\texttt{MOOC Project} }
+
+\begin{document}
+
+\title{Architecture Document for Backend Division of \projectTitle}
+\author{Andrew Lalis\\ andrewlalisofficial@gmail.com}
+\date{Last modified on\\ \today}
+\maketitle
+
+\setcounter{tocdepth}{3}
+\tableofcontents
+
+\section{Introduction}
+	\subsection{Problem}
+		The problem that many programmers face is finding a project to collaborate on, in a way that doesn't leave them feeling intimidated by a lack of skill or inability to fully grasp the scope of a large, multi-person project.
+	\subsection{Solution}
+		To solve the aforementioned problem, we propose to introduce a web application to allow users to easily search for projects to collaborate on. The goal is to allow the user a friendly and quick way to find something to work on, with the skillset they already have. The point is to make it easier for new programmers to gain experience working on larger projects, in a way that makes it easier both for project managers and the individual developers.
+
+\section{User Stories}
+	Here, some common experiences users should expect are written 
+
+\section{Glossary}
+	Throughout the architecture document, several key words or phrases are used, many specific to the scope of this project. As such, those terms are defined below.
+
+	\begin{enumerate}
+		\item \emph{The Project} - The \projectTitle as a whole. It refers to the collective efforts of both the front- and back-end projects.
+
+		\item \emph{User} - Someone who uses the project for its intended purpose; to find other users to collaborate with, or to host a project so that other users may join it.
+
+		\item \emph{Project Manager} - A subset of users who have created their own projects.
+
+		\item \emph{Project} - A digital representation of a software collaboration project, lead by a project manager, and a list of users who are members of the project.
+
+	\end{enumerate}
+
+\end{document}
